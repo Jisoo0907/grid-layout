@@ -9,34 +9,114 @@
 :root {
   --main-width: 23.75rem;
   --main-border: 3.125rem;
+  --background-color: #1c1c1c;
+  margin: 0;
+  padding: 0;
 }
 body {
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard-Regular", "sans-serif";
+  background-color: var(--background-color);
 }
 
 .grid-container {
-  background-color: pink;
-
-  img {
+  display: grid;
+  place-items: center center;
+  row-gap: 1.54rem;
+  img,
+  .wrap,
+  .wrap2 {
     border-radius: var(--main-border);
   }
 
+  /* 로고 부분 */
   .wrap {
     width: var(--main-width);
+    background-color: white;
     height: 10.75rem;
+    margin-top: 2.06rem;
+    display: grid;
+    place-items: center;
+
+    .logo {
+      width: 16.88981rem;
+      height: 3.45913rem;
+    }
   }
 
+  /* 두 번째 단체 이미지 */
   .group {
     width: 29.77556rem;
     height: 17.25888rem;
   }
 
+  /* 스포티파이 그룹 */
   .wrap2 {
     width: var(--main-width);
     height: 38.375rem;
+    background-color: #094fc8;
+    position: relative;
+
     .spotify {
       width: 19.1875rem;
       height: 19.1875rem;
+      margin: 2.5rem 2.06rem 16.69rem;
+    }
+
+    /* spotify 화면 */
+    .text-group {
+      color: #fff;
+      position: absolute;
+      left: 2.5rem;
+      bottom: 2.56rem;
+      display: flex;
+      flex-flow: column nowrap;
+
+      /* 현재 플레이중인 폰트 스타일 */
+      span:first-child {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      span:nth-child(2),
+      span:nth-child(3) {
+        font-size: 4rem;
+        font-weight: 900;
+      }
+
+      span:last-child {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  /* 굿즈 소개 화면 */
+  .goods-group {
+    position: relative;
+
+    .goods-text {
+      color: #fbff49;
+      font-size: 2.5rem;
+      font-weight: 800;
+
+      text-transform: capitalize;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: #000;
+    }
+
+    .goods-text-group {
+      display: flex;
+      flex-flow: column nowrap;
+      position: absolute;
+      bottom: 4.19rem;
+      left: 4.81rem;
+    }
+    .arrow {
+      width: 1.875rem;
+      height: 1.875rem;
+      position: absolute;
+      right: 8rem;
+      bottom: 6.25rem;
     }
   }
 
@@ -49,8 +129,11 @@ body {
     width: var(--main-width);
     height: 14.4375rem;
   }
+
+  /* 마지막 로고 이미지 */
   .logo2 {
     width: 23.6875rem;
     height: 18.0625rem;
+    margin-bottom: 2.06rem;
   }
 }
