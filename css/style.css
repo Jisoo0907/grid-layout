@@ -24,7 +24,8 @@ body {
   display: grid;
   place-items: center center;
   row-gap: 1.54rem;
-  img,
+
+  img:not(.how-sweet-img),
   .wrap,
   .wrap2 {
     border-radius: var(--main-border);
@@ -47,7 +48,6 @@ body {
 
   /* 두 번째 단체 이미지 */
   .group {
-    width: 29.77556rem;
     height: 17.25888rem;
   }
 
@@ -102,8 +102,9 @@ body {
       font-weight: 800;
 
       text-transform: capitalize;
-      /* -webkit-text-stroke-width: 0.5px; */
-      -webkit-text-stroke-color: #000;
+      /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #000; */
+      text-shadow: 2px 2px 0px black;
     }
 
     .goods-text-group {
@@ -137,5 +138,10 @@ body {
     width: 23.6875rem;
     height: 18.0625rem;
     margin-bottom: 2.06rem;
+  }
+}
+@media (max-width: 1024px) {
+  .how-sweet-group {
+    display: none;
   }
 }
